@@ -43,7 +43,9 @@ const HeroSlider = () => {
   };
 
   return (
-    <div className="relative h-[600px] md:h-[700px] overflow-hidden">
+    // <div className="relative h-[600px] md:h-[700px] overflow-hidden">
+    <div className="relative h-[80vh] md:h-[90vh] overflow-hidden">
+
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -51,30 +53,64 @@ const HeroSlider = () => {
             index === currentSlide ? "opacity-100" : "opacity-0"
           }`}
         >
-          <div
+          {/* <div
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${slide.image})` }}
-          />
+          /> */}
+          {/* <div
+  className="
+    absolute inset-0
+    bg-center
+    bg-no-repeat
+    bg-contain
+    sm:bg-cover
+  "
+  style={{ backgroundImage: `url(${slide.image})` }}
+/> */}
+ <div
+  className="
+    absolute inset-0
+    bg-cover
+    bg-top
+    md:bg-center
+  "
+  style={{ backgroundImage: `url(${slide.image})` }}
+/>
+
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 to-foreground/40" />
           
-          <div className="relative container mx-auto px-4 h-full flex items-center justify-center">
+          {/* <div className="relative container mx-auto px-4 h-full flex items-center justify-center"> */}
+          <div className="relative container mx-auto px-4 h-full flex items-center justify-center pt-12 md:pt-0">
+
             <div className="max-w-3xl text-background text-center">
 
               {/* Company Name */}
-              <h1
+              {/* <h1
                 className="text-6xl md:text-6xl font-bold mb-3 animate-fade-in 
                  bg-gradient-to-r from-red-700 via-orange-500 to-orange-400 
                  bg-clip-text text-transparent leading-tight pb-2"
               >
                 Supreet Cooling Solutions
-              </h1>
+              </h1> */}
+             
+             <h1
+  className="text-4xl md:text-6xl font-bold mb-3 animate-fade-in 
+   bg-gradient-to-r from-red-700 via-orange-500 to-orange-400 
+   bg-clip-text text-transparent leading-tight pb-2"
+>
+  Supreet Cooling Solutions
+</h1>
 
               {/* UPDATED SLIDE TITLE SIZE */}
-              <h1 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-in">
+              {/* <h1 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-in"> */}
+              <h1 className="text-2xl md:text-4xl font-bold mb-3 animate-fade-in">
+
                 {slide.title}
               </h1>
 
-              <p className="text-xl md:text-2xl mb-8 text-background/90">
+              {/* <p className="text-xl md:text-2xl mb-8 text-background/90"> */}
+              <p className="text-base md:text-2xl mb-6 text-background/90">
+
                 {slide.subtitle}
               </p>
 
